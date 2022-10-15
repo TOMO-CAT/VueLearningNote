@@ -1,0 +1,23 @@
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+<div id="app">
+    <h1>{{ message }}</h1>
+    <p>Count is: {{ counter.count }}</p>
+</div>
+
+<script>
+    // 从 vue 模块引入 createApp
+    const { createApp } = Vue
+
+    createApp({
+        data() {
+            return {
+                message: 'Hello World!',
+                counter: {
+                    count: 0
+                }
+            }
+        }
+    }).mount('#app')
+</script>
+
